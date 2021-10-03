@@ -1,0 +1,2 @@
+# Data-Analysis-Intern
+Data analysis is a technique that typically involves multiple activities such as gathering, cleaning, and organizing the data. These processes, which usually include data analysis software, are necessary to prepare the data for business purposes. Data analysis is also known as data analytics, described as the science of analyzing raw data to draw informed conclusions based on the data.
