@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ the_title }}</h1>
+
+<img alt="Photo: Flag of Naam Tamilar" src="{{ url_for('static', filename='images/magic3.jpg') }}">
+<p class="credit">The Devil Himself <a href="https://www.history.com/topics/folklore/history-of-the-devil" target="_blank">The Devil </a> Devil inc </p>
+
+<ul>
+  <li><a href="{{ url_for('myth') }}">Dark Arts Animated</a></li>
+  <li><a href="{{ url_for('index') }}">Home page</a></li>
+</ul>
+
+<p>The Devil, also referred to as Satan, is best known as the personification
+  of evil and the nemesis of good people everywhere. His image and story have evolved over the years,
+  and the Devil has been called many different names in various cultures: Beelzebub, Lucifer,
+  Satan and Mephistopheles,
+  to name a few, with various physical descriptions including horns and hooved feet. </p>
+
+<p>Although the Devil is present in some form in many religions and can be compared to some mythological gods, he’s arguably best known for his role in Christianity. In modern biblical translations, the Devil is the adversary of God and God’s people.
+
+It’s commonly thought that the Devil first showed up in the Bible in the book of
+  Genesis as the serpent who convinced Eve—who then convinced Adam—to eat forbidden fruit
+  from the “tree of the knowledge” in the Garden of Eden. As the story goes, after Eve fell for
+  the Devil’s
+  conniving ways, she and Adam were banished from the Garden of Eden and doomed to mortality.</p>
+
+<p>In Buddhism, Maara is the demon that tempted Buddha away from his path of enlightenment.
+  Like Christianity’s Jesus resisted the Devil,
+ Buddha also resisted temptation and defeated Maara.</p>
+
+<p>(Text from <a href="https://www.history.com/topics/folklore/history-of-the-devil" target="_blank">Wikipedia</a>)</p>
+
+
+{% endblock %}

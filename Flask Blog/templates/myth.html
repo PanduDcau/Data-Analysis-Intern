@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ the_title }}</h1>
+
+<img alt="Painting: Goddess Durga on a tiger's back" src="{{ url_for('static', filename='images/dark.jpeg') }}">
+<p class="credit">Early 18th century picture of the Guler School [Public domain] <a href="https://commons.wikimedia.org/wiki/File%3ADurga_Mahisasuramardini.JPG" target="_blank">via Wikimedia </a></p>
+
+<ul>
+  <li><a href="{{ url_for('symbol') }}">Animated Dark Arts</a></li>
+  <li><a href="{{ url_for('index') }}">Home page</a></li>
+</ul>
+
+<p>In spite of Justice League Dark: Apokolips War being confirmed as the last film in the DCAMU,
+  screenwriter Ernie Altbacker teased the possibility of a new project related to that continuity.
+The New God Darkseid has been on the warpath, destroying worlds throughout the universe and making his way towards Earth, building a tyrannical empire from his fiery home of Apokolips. Following his two failed invasions of Earth during Justice League: War and Reign of the Supermen, the Justice League prepare to launch a counter-attack on Apokolips, while Teen Titans remain on Earth to defend it. Unbeknownst to the heroes, Darkseid is spying on them through Cyborg's Apokolyptian technology and is aware of their plan. Upon their arrival at Apokolips, the League is decimated by Darkseid's Paradooms: genetic
+hybrids of Parademons and Doomsday. John Constantine flees from the battle, leaving his lover, Zatanna, to die.</p>
+
+<p>At the ruins of Titans Tower, despite their victory, Batman reveals that the Reapers managed to drain 31% of the Earth's molten core, which will disrupt the
+  planet's orbit and take one billion more lives before they can find a solution.</p>
+
+<p>Constantine informs the Flash that he needs to run back in time and create
+  another Flashpoint, despite the speedster swearing to Iris that he'd never do it again.
+  Though reluctant, Barry agrees that regardless of the results, while it won't be perfect.</p>
+
+<p> while it won't be perfect, it would still be a better world than the present. Watching as their New 52 timeline gets reset, Damian and Raven share their only kiss as the heroes
+ remain optimistic about their future as they disappear into the unknown.</p>
+
+<p>(Text from <a href="https://dcanimatedmovieuniverse.fandom.com/wiki/Justice_League_Dark:_Apokolips_War" target="_blank">Wikipedia</a>)</p>
+
+
+{% endblock %}

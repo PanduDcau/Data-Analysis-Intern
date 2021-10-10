@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- to be filled by the Python script -->
+<h1>{{ the_title }}</h1>
+
+<!-- note how items from the "static" folder are linked -->
+<img alt="Photo: Bengal Tiger" src="{{ url_for('static', filename='images/conj.jpg') }}">
+<p class="credit">Photo by John and Karen Hollingsworth, retouched by Zwoenitzer
+  (Fish &amp; Wildlife Service, ID WO0409-33F) [Public domain] <a href="https://commons.wikimedia.org/wiki/File%3APanthera_tigris_tigris.jpg" target="_blank">via Wikimedia Commons</a></p>
+
+<p>This is the Main Index Page of Dark Arts.</p>
+
+<ul>
+  <!-- note how items from routes in the the Python script are linked -->
+  <li><a href="{{ url_for('myth') }}">In Myth and Legend</a></li>
+  <li><a href="{{ url_for('symbol') }}">Dark Myths in Animated</a></li>
+</ul>
+
+<p>The Conjuring (<em>Based on true Story</em>) The Conjuring: The Devil Made Me Do It (also known as The Conjuring 3)
+ is a 2021 American supernatural horror film.<em>True Story</em> screenplay by David Leslie Johnson-McGoldrick from a story by Johnson-McGoldrick and James Wan. The film serves as a sequel to The Conjuring (2013) and The Conjuring 2 (2016), and as the eighth installment in the Conjuring Universe. Patrick Wilson and Vera Farmiga reprise their roles as paranormal investigators and
+authors Ed and Lorraine Warren, with Ruairi O'Connor, Sarah Catherine Hook, and Julian Hilliard also starring.Initial development for a third Conjuring film began in 2016, though Wan stated that he would not be directing another film in the series due to scheduling conflicts with other projects. Safran confirmed that the next film would not be a haunted house film. By June 2017, it was officially announced that a third installment was in development, with David Leslie Johnson hired to write the screenplay. Michael Chaves was announced as the film's director,
+  after previously directing The Curse of La Llorona (2019). Filming took place in Georgia in summer 2019.</p>
+
+<p>Originally slated for a September 2020 release, the film was delayed due to the COVID-19 pandemic.
+  The Conjuring: The Devil Made Me Do It was released by Warner Bros. Pictures and New Line Cinema in the
+  United States on June 4, 2021, where it also had a simultaneous month-long release on the HBO Max streaming service.
+  The film grossed $202 million against a budget of $39 million and received mixed reviews from critics,
+  who praised the performances of Wilson
+ and Farmiga, but criticized the screenplay and noted it to be weaker than the previous installments.</p>
+
+<p>(Text from <a href="https://en.wikipedia.org/wiki/The_Conjuring:_The_Devil_Made_Me_Do_It" target="_blank">Wikipedia</a>)</p>
+
+
+{% endblock %}
