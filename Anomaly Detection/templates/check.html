@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="adventure tours, Experiences Are More Satisfying Than Things, GO BIG OR&nbsp;STAY HOME, Best places for hiking tours, Hike the amazing mountains, Send us messages for any info.">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Check</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.27.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#47b2c9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+
+
+<form method="POST" action="{{ url_for('Check2')}}" enctype="multipart/form-data">
+      		
+<center><p> Column in your data frame is </p></center>
+<br>
+<h2 style = "text-align: center; background-color: #009B77; font-size: 30px;  font-weight: 1000; padding:4px; padding-left: 3px; text-transform: uppercase; ">{{ prediction_text2 }}</h2>
+<center> Re enter your data set to confirm the numeric Columns
+
+<p><input type="file" name="file" required></p>
+
+<p> Selects the columns that you need to check for outliers</p>
+
+<div id="div1">
+
+</div>
+
+<script>
+
+const output = document.getElementById('div1');
+
+let girls=[];
+let names={{ prediction_text2|tojson }}
+
+for (var i = 0; i < names.length; i++) {
+    
+    girls.push({id:'i', name: names[i] });
+}
+
+
+  output.innerHTML = girls.map(girl => {  
+    return `<div>
+      			<input type="checkbox" id=${girl.id} name='vehicle1' value='${girl.name}'>
+      			<label for="html">${girl.name}</label>
+    		</div>`;
+  }).join('')
+
+</script>
+
+<input type="checkbox" id='A' name='vehicle1' value='Whole_Data_Set'>
+<label for="A">Whole Data Set</label>
+<p> Select the methodf to extract outliers</p>
+      	<select name = "outlier">
+        	<option value = 0>Inter Qurtile Ranges</option>
+        	<option value = 1>Isolation Forest</option>
+        	<option value = 3>Minimum Covariance Determinant</option>
+		<option value = 4>Local Outlier Factor</option>
+                <option value = 2>One class Support vector machine</option>
+                <option value= 5>KNN Algorithem</option>
+
+      	</select>
+      		<p><button id = "btn">Download</button></p>
+    	</form>
+	<p>Dowload the csv files only with outliers</p></center>
+
+
+
+  </body>
+</html>
