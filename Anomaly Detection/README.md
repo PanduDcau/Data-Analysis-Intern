@@ -32,3 +32,6 @@ python app.py
 By default, flask will run on port 5000.
 
 2. Navigate to URL http://localhost:5000
+
+
+### Dockerizing The Application
