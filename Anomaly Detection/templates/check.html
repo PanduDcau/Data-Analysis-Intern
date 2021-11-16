@@ -1,92 +1,406 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="adventure tours, Experiences Are More Satisfying Than Things, GO BIG OR&nbsp;STAY HOME, Best places for hiking tours, Hike the amazing mountains, Send us messages for any info.">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Check</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" media="screen">
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}" defer=""></script>
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}" defer=""></script>
-    <meta name="generator" content="Nicepage 3.27.0, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i">
-    
-    
-    
-    
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": ""
-}</script>
-    <meta name="theme-color" content="#47b2c9">
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
-  </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+<html lang="en">
+<head>
+<title>Check outliers</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ccc;
+}
 
-<form method="POST" action="{{ url_for('Check2')}}" enctype="multipart/form-data">
-      		
-<center><p> Column in your data frame is </p></center>
-<br>
-<h2 style = "text-align: center; background-color: #009B77; font-size: 30px;  font-weight: 1000; padding:4px; padding-left: 3px; text-transform: uppercase; ">{{ prediction_text2 }}</h2>
-<center> Re enter your data set to confirm the numeric Columns
+/* Style the header */
+header {
+  background-color: #000000;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  height: auto;
+}
 
-<p><input type="file" name="file" required></p>
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 100%;
+  overflow: scroll;
+  height: auto; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
 
-<p> Selects the columns that you need to check for outliers</p>
+nav1 {
+  float: left;
+  width: 100%;
+  overflow: scroll;
+  height: auto; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
 
-<div id="div1">
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-</div>
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #ccc;
+  height: auto; /* only for demonstration, should be removed */
+}
 
-<script>
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-const output = document.getElementById('div1');
+/* Style the footer */
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
 
-let girls=[];
-let names={{ prediction_text2|tojson }}
+.column {
+  float: left;
+  width: 33.33%;
+}
 
-for (var i = 0; i < names.length; i++) {
-    
-    girls.push({id:'i', name: names[i] });
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
-  output.innerHTML = girls.map(girl => {  
-    return `<div>
-      			<input type="checkbox" id=${girl.id} name='vehicle1' value='${girl.name}'>
-      			<label for="html">${girl.name}</label>
-    		</div>`;
-  }).join('')
-
-</script>
-
-<input type="checkbox" id='A' name='vehicle1' value='Whole_Data_Set'>
-<label for="A">Whole Data Set</label>
-<p> Select the methodf to extract outliers</p>
-      	<select name = "outlier">
-        	<option value = 0>Inter Qurtile Ranges</option>
-        	<option value = 1>Isolation Forest</option>
-        	<option value = 3>Minimum Covariance Determinant</option>
-		<option value = 4>Local Outlier Factor</option>
-                <option value = 2>One class Support vector machine</option>
-                <option value= 5>KNN Algorithem</option>
-
-      	</select>
-      		<p><button id = "btn">Download</button></p>
-    	</form>
-	<p>Dowload the csv files only with outliers</p></center>
 
 
 
-  </body>
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+    width: 25%;
+    height: auto;
+    float: left;
+    background-color: rgb(223, 168, 168);
+    border-collapse: collapse;
+}
+
+.middlepane1 {
+    width: 25%;
+    height: auto;
+    float: left;
+    background-color: rgb(203, 214, 248);
+    border-collapse: collapse;
+}
+
+.middlepane2 {
+    width: 25%;
+    height: auto;
+    float: left;
+    background-color: rgb(184, 241, 220);
+    border-collapse: collapse;
+}
+
+.rightpane {
+  width: 25%;
+  height: auto;
+  position: relative;
+  float: right;
+  background-color: rgba(245, 238, 179, 0.986);
+  border-collapse: collapse;
+}
+
+.toppane {
+  width: 100%;
+  height: 80px;
+  border-collapse: collapse;
+  background-color: #d1c2c013;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2 style="font-family: 'Courier New', Courier, monospace; border-style: dotted; border-width: thick;">AVAILABLE NUMERIC COLUMNS IN YOUR DATAFRAME</h2>
+  <form method="POST" action="{{ url_for('Check2')}}" enctype="multipart/form-data">
+    <h4 style = "text-align: center; font-size: 15px;  font-weight: 1000; padding:4px; padding-left: 3px; text-transform: uppercase; ">{{ prediction_text2 }}</h2>
+  </form>
+</header>
+  
+
+<section>
+  <nav>
+    <h1><b><center>UPLOADED DATASET TO THE SYSTEM :</center></b></h1>
+    <center>
+    {{data1 | safe}}
+    </center>
+  </nav>
+</section>
+<nav>
+<p><center> <b>SUMMARY OF THE DATASET :</b></center></p>
+<center>{{data2 | safe}}</center>
+ <center> <p>Total No of Records and the Columns in the data set : </p>{{shape1}}</center>
+</nav>
+<nav1>
+  <p> <b><center>BOXPLOT OF THE NUMERIC VARIABLES :</center></b></p>
+  <center><img src={{ url}} alt="Chart" height="1000" width="1500"></center>
+</nav1>
+
+<article><div class="container">
+  <div class="toppane"><h3><u><center><br>DETECT THE OUTLIERS OF THE DATA SET</center></u></h3></div>
+  <br>
+
+
+  <div class="leftpane">
+    <form method="POST" action="{{ url_for('Check3')}}" enctype="multipart/form-data">
+      <center><p><b><font style = "outline-style: solid;" , "outline-width: 4px;" , "font-size: 25px;" > SECTION : 01 </font></b></p></center>
+      <center><p><b> Selects the columns that you need to check for outliers visually : </b></p></center>
+      <center> <p style="font-size: 15px;" > *** Select <b><u>more than</u></b> two columns here </p></center>
+        <br><br>
+        <div id="div11">
+        </div>
+        
+        <script>
+            const output11 = document.getElementById('div11');
+            let dds1=[];
+            let names1={{ prediction_text2|tojson }}
+    
+            for (var i = 0; i < names1.length; i++) {
+              dds1.push({id:'i', name: names1[i] });
+            }
+            output11.innerHTML = dds1.map(dd1 => {  
+            return `<div>
+                <input type="checkbox" id=${dd1.id} name='check01' value='${dd1.name}'>
+                <label for="html">${dd1.name}</label>
+            </div>`;
+          }).join('')
+        </script>
+        
+        <center><p><b><br><br><br> Selects the Method that you need to check for outliers visually : </b></p></center>
+     
+    
+        <center>
+        
+          <select name = "outlier">
+            <option value = 0>Inter Qurtile Ranges</option>
+            <option value = 1>Isolation Forest</option>
+            <option value = 2>Minimum Covariance Determinant</option>
+            <option value = 3>Local Outlier Factor</option>
+            <option value = 4>One class Support vector machine</option>
+            <option value = 5>KNN Algorithem</option>
+          </select>
+        <p><button id = "btn">Check the outliers visually</button></p>
+      </form></div>
+
+      <div class="middlepane1">
+      <form method="POST" action="{{ url_for('Check4')}}" enctype="multipart/form-data">
+      <center><p><b><font style = "outline-style: solid;" , "outline-width: 4px;" , "font-size: 25px;" > SECTION : 02 </font></b></p></center>
+      <center><p><b> Selects the numeric column (one column) that you need to check for outliers visually : </b></p></center>
+       <center> <p style="font-size: 15px;" >*** Please select <b><u>one</u></b> column only</p></center>
+          <br><br>
+          <div id="div12">
+          </div>
+          
+          <script>
+              const output12 = document.getElementById('div12');
+              let dds12=[];
+              let names12={{ prediction_text2|tojson }}
+      
+              for (var i = 0; i < names12.length; i++) {
+                dds12.push({id:'i', name: names12[i] });
+              }
+              output12.innerHTML = dds12.map(dd12=> {  
+              return `<div>
+                  <input type="checkbox" id=${dd12.id} name='check12' value='${dd12.name}'>
+                  <label for="html">${dd12.name}</label>
+              </div>`;
+            }).join('')
+          </script>
+          
+      <center><p><b><br><br><br> Selects the Non numeric columns that you <br>need to investigate outliers : </b></p></center>
+      <br>
+          <div id="div212">
+          </div>
+      
+          <script>
+         
+              const output123 = document.getElementById('div212');
+              let ddss23=[];
+              let namess23={{ prediction_text3|tojson }}
+              
+              
+                for (var i = 0; i < namess23.length; i++) {
+                ddss23.push({id:'i', name: namess23[i] });
+              }
+              if (ddss23.length) {
+                 document.getElementById("div212").innerHTML = ddss23.map(ddd23 => {  
+              return `<div>
+                  <input type="checkbox" id=${ddd23.id} name='check23' value='${ddd23.name}'>
+                  <label for="html">${ddd23.name}</label>
+              </div>`;
+            }).join('')
+       
+      } else {
+           document.getElementById("div212").innerHTML = "No Non Numeric Columns are available";
+      }
+              </script><br>
+      
+          <center><p><b> Selects the Method that you need to <br> check for outliers visually : </b></p></center>
+       <center><select name = "outlier12">
+              <option value = 0>Inter Qurtile Ranges</option>
+              <option value = 1>Isolation Forest</option>
+              <option value = 2>Minimum Covariance Determinant</option>
+              <option value = 3>Local Outlier Factor</option>
+              <option value = 4>One class Support vector machine</option>
+              <option value = 5>KNN Algorithem</option>
+            </select>
+          <p><button id = "btn">Check the outliers visually</button></p></center>
+        </form></div>
+
+
+
+  <div class="middlepane2">
+  <form method="POST" action="{{ url_for('Check2')}}" enctype="multipart/form-data">
+    <center><p><b><font style = "outline-style: solid;" , "outline-width: 4px;" , "font-size: 25px;" > SECTION : 03 </font></b></p></center>
+    <center><p><b> Selects the columns that you need to check for outliers : </b></p></center>
+    <center> <p style="font-size: 15px;" > *** Select <b><u>any</u></b> number of columns </p></center>
+    <br><br>
+    <div id="div1">
+    </div>
+    
+    <script>
+        const output = document.getElementById('div1');
+        let dds=[];
+        let names={{ prediction_text2|tojson }}
+
+        for (var i = 0; i < names.length; i++) {
+          dds.push({id:'i', name: names[i] });
+        }
+        output.innerHTML = dds.map(dd => {  
+        return `<div>
+            <input type="checkbox" id=${dd.id} name='check01' value='${dd.name}'>
+            <label for="html">${dd.name}</label>
+        </div>`;
+      }).join('')
+    </script>
+    
+    <input type="checkbox" id='A' name='check01' value='Whole_Data_Set'>
+    <label for="A">Whole Numeric Columns</label>
+
+    <br><br><br>
+    <center>
+    <p> <b>Select the method to extract <br>outliers :</b></p>
+      <select name = "outlier">
+        <option value = 0>Inter Qurtile Ranges</option>
+        <option value = 1>Isolation Forest</option>
+        <option value = 2>Minimum Covariance Determinant</option>
+        <option value = 3>Local Outlier Factor</option>
+        <option value = 4>One class Support vector machine</option>
+        <option value = 5>KNN Algorithem</option>
+      </select></center><br><br>
+<center><p><b><br><br>Selects the Non numeric columns that you <br>need to include in your outlier file : </b></p></center>
+<br>
+    <div id="div2">
+    </div>
+
+    <script>
+   
+        const output1 = document.getElementById('div2');
+        let ddss=[];
+        let namess={{ prediction_text3|tojson }}
+        
+        
+          for (var i = 0; i < namess.length; i++) {
+          ddss.push({id:'i', name: namess[i] });
+        }
+        output1.innerHTML = ddss.map(ddd => {  
+        return `<div>
+            <input type="checkbox" id=${ddd.id} name='check02' value='${ddd.name}'>
+            <label for="html">${ddd.name}</label>
+        </div>`;
+      }).join('')
+    </script>
+    <input type="checkbox" id='A1' name='check02' value='Whole_Non_Numeric'>
+    <label for="A1">All the Non Numeric columns</label>  
+    <center><p><button id = "btn">Download</button></p></center>
+    <center><p style="font-size: 10px;" >Dowload the csv files only with outliers</p></center>
+
+
+
+</form></div>
+
+
+
+  <div class="rightpane">
+  <form method="POST" action="{{ url_for('Check2')}}" enctype="multipart/form-data">
+    <center><p><b><font style = "outline-style: solid;" , "outline-width: 4px;" , "font-size: 25px;" > SECTION : 04 </font></b></p></center>
+    <p><b><center>Detect the outliers of the desire subset of the dataset :</center></b></p>
+  
+<input type="checkbox" id='A2' name='check03' value='Actual_Dispatch'>
+    <label for="A2">Actual Dispatch</label>  
+
+<select name = "subset">
+        <option value = 10>Greater than</option>
+        <option value = 11>Less than</option>
+        <option value = 22>Greater than or Equal</option>
+        <option value = 33>Less than or Equal</option>
+        <option value = 44>Equal</option>
+      </select>
+<br>
+<label for="subval">Enter Value:</label>
+  <input type="text" id="subval" name="subval"><br><br>
+  </form></div>
+  <div class = 'rightpane'>
+
+  </div>
+       
+  </div></article>
+</body>
 </html>
+
