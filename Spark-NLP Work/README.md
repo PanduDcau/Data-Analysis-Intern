@@ -6,6 +6,7 @@
 
 Use these Platforms for Running the Spark-NLP Work
 ### Prerequist Configurations
- Python Version - Python 3.7.x
- Java -version  - openjdk version "11.0.x"
+ ##### Python Version - Python 3.7.x
+
+ ##### Java -version  - openjdk version "11.0.x"
  
