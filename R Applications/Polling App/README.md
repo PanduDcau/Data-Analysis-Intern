@@ -11,9 +11,22 @@ This Simple app utilizes modules and promises to show possible paths torwards sc
  ```
 
 ## Demonstration
-
 https://user-images.githubusercontent.com/52339029/145726902-594c34d8-c418-424a-ae33-92c4d71e6d6f.mp4
 
+## Application Deployment
+Create a .Renviorn and need to create these system Envirnoments.
+ ```
+ api_key = Your Key from firebase created Application
+ db_url = Realtime Database url from Firebase Realtime Database
+ ```
+ Use this command to create the system environments
+ ```
+Sys.setenv(api_key="api key of the firebase App")
+ ```
 
- 
+
+Realtime Database Setup Tutorial :- [Realtime](https://youtu.be/qKxisFLQRpQ)
+
+ ## Deplying Application
+ After Settting up the Application You can Run the application from your 
 
