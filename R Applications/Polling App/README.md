@@ -28,5 +28,9 @@ Sys.setenv(api_key="api key of the firebase App")
 Realtime Database Setup Tutorial :- [Realtime](https://youtu.be/qKxisFLQRpQ)
 
  ## Deplying Application
- After Settting up the Application You can Run the application from your 
+ After Settting up the Application You can Run the application from your **Rstudion**.
+ Use this Command
+ ```
+runApp()
+ ```
 
