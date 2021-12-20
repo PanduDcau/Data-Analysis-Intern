@@ -53,6 +53,12 @@ Feel free to fork the model and add your own suggestiongs.
 4. Push to the Branch (`git push origin feature/YourGreatFeature`)
 5. Open a Pull Request
 
+## 4. Execution Order
+1. `download_data` Cleansing the data of Selected file.
+2. `decision_tree` decision tree used for classifcation of data.
+3. `logistic_regression` Logistic regression done for the data.
+4. `pipeline.py` pipeline used for impelemnting the system in kubeflow 
+
 <!-- contact -->
 ## 5. Contact
 If you have any question, feel free to reach me out at:
