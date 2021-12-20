@@ -5,7 +5,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Medium][medium-shield]][medium-url]
-[![Twitter][twitter-shield]][twitter-url]
 [![Linkedin][linkedin-shield]][linkedin-url]
 
 # Kubeflow Pipelines: How to Build your First Kubeflow Pipeline from Scratch
