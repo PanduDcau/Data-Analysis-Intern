@@ -11,7 +11,7 @@
 [![DOI](https://zenodo.org/badge/37549137.svg)](https://zenodo.org/badge/latestdoi/37549137)
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00268/status.svg)](https://doi.org/10.21105/joss.00268)
 
-# Windrose
+# Windrose Tutorial
 
 A [wind rose](https://en.wikipedia.org/wiki/Wind_rose) is a graphic tool used by meteorologists to give a succinct view of how wind speed and direction are typically distributed at a particular location. It can also be used to describe air quality pollution sources. The wind rose tool uses Matplotlib as a backend. Data can be passed to the package using Numpy arrays or a Pandas DataFrame.
 
