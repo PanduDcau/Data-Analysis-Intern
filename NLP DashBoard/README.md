@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Demo 
 
-![image](https://user-images.githubusercontent.com/4992012/68629236-59dd8b00-04e3-11ea-85f1-cc42419d4949.png)
+![image](https://github.com/Pandula1234/Data-Analysis-Intern/blob/main/NLP%20DashBoard/src/img/dashboard.PNG)
 
 # Prerequists
 1) Angular CLI
