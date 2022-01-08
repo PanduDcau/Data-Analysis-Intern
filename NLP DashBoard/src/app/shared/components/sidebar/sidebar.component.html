@@ -1,0 +1,82 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>NLP ENGINE</h2>
+            <h4>Vizuamtrix@tsdclanka.com</h4>
+        </div>
+        <img src="https://pbs.twimg.com/profile_images/726447786208665600/MKWLlbHi_400x400.jpg" alt="Justice League">
+    </div>
+
+    <mat-divider></mat-divider>
+
+
+    <h2 matSubheader>Main Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+
+    <mat-divider></mat-divider>
+    <h2 matSubheader>Work Engines</h2>
+        <button mat-button [matMenuTriggerFor]="animals">Additional Work</button>
+        <mat-menu #animals="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+          <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        </mat-menu>
+        <mat-menu #vertebrates="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+          <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+          <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+          <button mat-menu-item>Birds</button>
+          <button mat-menu-item>Mammals</button>
+        </mat-menu>
+        <mat-menu #invertebrates="matMenu">
+          <button mat-menu-item>Insects</button>
+          <button mat-menu-item>Molluscs</button>
+          <button mat-menu-item>Crustaceans</button>
+          <button mat-menu-item>Corals</button>
+          <button mat-menu-item>Arachnids</button>
+          <button mat-menu-item>Velvet worms</button>
+          <button mat-menu-item>Horseshoe crabs</button>
+        </mat-menu>
+        <mat-menu #fish="matMenu">
+          <button mat-menu-item>Baikal oilfish</button>
+          <button mat-menu-item>Bala shark</button>
+          <button mat-menu-item>Ballan wrasse</button>
+          <button mat-menu-item>Bamboo shark</button>
+          <button mat-menu-item>Banded killifish</button>
+        </mat-menu>
+        <mat-menu #amphibians="matMenu">
+          <button mat-menu-item>Sonoran desert toad</button>
+          <button mat-menu-item>Western toad</button>
+          <button mat-menu-item>Arroyo toad</button>
+          <button mat-menu-item>Yosemite toad</button>
+        </mat-menu>
+        <mat-menu #reptiles="matMenu">
+          <button mat-menu-item>Banded Day Gecko</button>
+          <button mat-menu-item>Banded Gila Monster</button>
+          <button mat-menu-item>Black Tree Monitor</button>
+        </mat-menu>
+<br>
+
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/posts">Fake News Analysis</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+
+        <mat-divider></mat-divider>
+
+        <h2 matSubheader>Tools</h2>
+    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+            <mat-icon>import_contacts</mat-icon>
+            Contacts
+        </a>
+    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+            <mat-icon>contact_phone</mat-icon>
+            Leads
+        </a>
+    
+</mat-nav-list>

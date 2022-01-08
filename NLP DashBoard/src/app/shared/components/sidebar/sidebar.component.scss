@@ -1,0 +1,73 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 12px;
+  border: 1px solid #555;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-card {
+  max-width: 320px;
+  margin: 5px 10px 10px 5px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+mat-drawer {
+
+  position: fixed;
+  background-color: rgb(236, 236, 236);
+}
+
+.example-sidenav-content:first-child {
+  margin: 10px 5px 5px 5px;
+}
+
+.list-width {
+  width: 200px;
+
+}
+
+.list-item:hover {
+  background-color: rgba(83, 83, 83, 0.178);
+  cursor: pointer;
+}
