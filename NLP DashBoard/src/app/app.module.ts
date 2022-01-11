@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,8 +22,7 @@ import { DefaultModule } from './layouts/default/default.module';
     DefaultModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
-    MatMenuModule
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
