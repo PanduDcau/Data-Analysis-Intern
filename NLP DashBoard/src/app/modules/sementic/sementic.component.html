@@ -50,3 +50,82 @@
 <p>
   <b>The following keywords are selected:</b> {{formControl.value}}
 </p>
+
+<mat-divider></mat-divider>
+
+<mat-tab-group>
+  <mat-tab label="Sentimental Analysis"> 
+    
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  
+  </mat-tab>
+
+  <mat-tab label="Tokenization"> 
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button (click)="picker.open()">Open</button>
+    
+  </mat-tab>
+
+  <mat-tab label="NER Moduling">
+    
+    <mat-horizontal-stepper [linear]="isLinear"> 
+      <mat-step [stepControl]="firstFormGroup">
+         <form [formGroup]="firstFormGroup">  
+          <ng-template matStepLabel>Step 1</ng-template>  
+          <button mat-button mat-raised-button color="primary" matStepperNext>Solve</button>        
+        </form>
+      </mat-step>
+  
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Step 2</ng-template>
+          <mat-form-field>
+              <input matInput placeholder="Any input" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <button mat-button mat-raised-button color="primary" matStepperNext>Next</button>          
+          <button mat-button mat-raised-button color="" matStepperPrevious>Back</button>        
+        </form>
+      </mat-step>
+  
+      <mat-step>
+        <ng-template matStepLabel icon>Done</ng-template>
+        You are now done.      
+        <button mat-button mat-raised-button color="primary" >Done</button>      
+      </mat-step>
+  </mat-horizontal-stepper>
+  
+   </mat-tab>
+</mat-tab-group>
+
+
+<br>
+<br>
+<br>

@@ -4,7 +4,23 @@
     
   }
 
-  
+  mat-form-field {
+    margin-right: 12px;
+    padding: 20px;
+  }
+
+  .demo-inline-calendar-card {
+    width: 300px;
+  }
+
+  .example-form-field {
+    margin: 0 8px 16px 0;
+  }
+
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
   .example-chip-list {
     width: 100%;
   }
