@@ -1,75 +1,29 @@
-.example-sidenav-content{
-  background: url(../img/back1.jpg);
-  width: 100%; 
-  background-size: cover;
-}
-  
-.example-card {
-    max-width: 320px;
-    margin: 5px 10px 10px 5px;
-    button{
-        padding: 5px;
-        justify-content: center;
-        margin: 5px;
-        transition-duration: 0.3s;
-        border-radius: 5px;
-        &:hover{
-            box-shadow: 0 12px 16px 0 rgba(17, 16, 16, 0.24), 0 17px 50px 0 rgba(32, 14, 14, 0.19);
-   }
-    &:active {
-        background:darken(rgba(96, 104, 219, 0.822),25%);
-  } 
-  }
-}
-  
-.example-header
-{
-    background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a2/Justice_League_-_Injustice_for_All_Coverart.png');
-    background-size: cover;
-}
-
-.example-header2
-{
-    background-image: url('https://downloadwap.com/thumbs4/ringtones/covers/s/ssquad.jpg');
-    background-size: cover;
-}
-
-  mat-drawer-content {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .example-spacer {
-    flex: 1 1 auto;
-  }
-  
-  mat-drawer {
-  
-    position: fixed;
-    background-color: rgb(236, 236, 236);
-  }
-  
-  .example-sidenav-content:first-child {
-    margin: 10px 5px 5px 5px;
-  }
-  
-  .list-width {
-    width: 200px;
-  
-  }
-  
-  .list-item:hover {
-    background-color: rgba(83, 83, 83, 0.178);
-    cursor: pointer;
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+    
   }
 
-  .example-sidenav-content
-  {
-      padding: 25px;
-  }
-
+  
   .example-chip-list {
     width: 100%;
+  }
+
+  .example-box.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-chip .cdk-drop-list-dragging {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-sidenav-content{
+    width: 100%; 
+    display:inline-flex;
+    h4{
+        padding: 5px;
+    }
+    mat-form-field{
+        padding: 10px;
+    }
   }

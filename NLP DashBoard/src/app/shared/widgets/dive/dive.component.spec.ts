@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SementicComponent } from './sementic.component';
+import { DivComponent } from './dive.component';
 
-describe('SementicComponent', () => {
-  let component: SementicComponent;
-  let fixture: ComponentFixture<SementicComponent>;
+describe('DivComponent', () => {
+  let component: DivComponent;
+  let fixture: ComponentFixture<DivComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SementicComponent ]
+      declarations: [ DivComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SementicComponent);
+    fixture = TestBed.createComponent(DivComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

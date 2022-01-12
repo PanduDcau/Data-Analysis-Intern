@@ -1,58 +1,52 @@
-<mat-divider></mat-divider>
+<div class="example-sidenav-content" fxLayout="row wrap" fxLayoutGap="10px" fxLayout.xs="column" fxLayoutAlign="space-evenly center">
 
-<!-- <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards"> -->
-<!-- <mat-card fxFlex="50" class="example-card"> -->
+  <h4>Category of the System</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <br>
   
-<div class="example-sidenav-content" fxLayout="row wrap" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutAlign="space-evenly center">
+  <h4>Select the Type of Analysis</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Cars</mat-label>
+    <select matNativeControl required>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </mat-form-field>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header2"></div>
-      <mat-card-title>Justice League</mat-card-title>
-      <mat-card-subtitle>Triology</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://images.indianexpress.com/2021/03/zack-snyders-justice-league-1200-1.jpg" alt="Justice League">
-    <mat-card-content>
-      <p>
-        Steppenwolf and his Parademons return after eons to capture Earth. However, Batman seeks the help of Wonder Woman to recruit and assemble Flash, 
-        Cyborg and Aquaman to fight.Batman and Wonder Woman recruit The Flash, Aquaman, and Cyborg after the death of Superman 
-        to save the world.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button class="button" mat-button>LIKE</button>
-        <button class="button" mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-
-      <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header2"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://www.nme.com/wp-content/uploads/2021/03/justiceleague-2000x1270-1-400x254.jpg" alt="JLA">
-    <mat-card-content>
-      <p>
-        Bruce Wayne and Diana Prince try to bring the metahumans of Earth together after the death of Clark Kent. Meanwhile, Darkseid sends Steppenwolf to Earth with a vast army to subjugate humans.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-
-  </div>
-
-<div>
-    <app-widget-area [data]="bigChart"></app-widget-area>
 </div>
 
-<br>
+<p>
+  <i>Select a focused chip by pressing <code>SPACE</code></i>
+</p>
 
-<mat-divider> </mat-divider>
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Video keywords</mat-label>
+  <mat-chip-list #chipList aria-label="Video keywords" multiple [formControl]="formControl">
+    <mat-chip
+        *ngFor="let keyword of keywords"
+        [selected]="keyword"
+        [value]="keyword"
+        (removed)="removeKeyword(keyword)">
+      {{keyword}}
+    </mat-chip>
+    <input
+      placeholder="New keyword..."
+      [matChipInputFor]="chipList"
+      (matChipInputTokenEnd)="addKeywordFromInput($event)">
+  </mat-chip-list>
+</mat-form-field>
 
-
-
-  
+<p>
+  <b>The following keywords are selected:</b> {{formControl.value}}
+</p>

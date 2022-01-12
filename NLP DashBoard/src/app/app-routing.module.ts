@@ -14,11 +14,12 @@ const routes: Routes = [{
   }, {
     path: 'posts',
     component: PostsComponent
-  }
-  , {
+  },
+  {
     path: 'sementic',
     component: SementicComponent
-  }]
+  }
+  ]
 }];
 
 @NgModule({
