@@ -27,7 +27,7 @@
 </div>
 
 <p>
-  <i>Select a focused chip by pressing <code>SPACE</code></i>
+ <strong>Select the Frequency for Sentimental Analysis </strong> Click <code>SPACE</code>
 </p>
 
 <mat-form-field class="example-chip-list" appearance="fill">
@@ -97,16 +97,29 @@
   <mat-tab label="NER Moduling">
     
     <mat-horizontal-stepper [linear]="isLinear"> 
+
       <mat-step [stepControl]="firstFormGroup">
          <form [formGroup]="firstFormGroup">  
-          <ng-template matStepLabel>Step 1</ng-template>  
+          <ng-template matStepLabel>Data Cleaning</ng-template> 
+          <mat-form-field appearance="fill">
+            <mat-label>Cars</mat-label>
+            <select matNativeControl required>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </mat-form-field>
+          <!-- <mat-form-field>
+            <input matInput formControlName="firstCtrl" placeholder="Analysis" required>
+        </mat-form-field>  -->
           <button mat-button mat-raised-button color="primary" matStepperNext>Solve</button>        
         </form>
       </mat-step>
   
       <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Step 2</ng-template>
+          <ng-template matStepLabel>Data Processing</ng-template>
           <mat-form-field>
               <input matInput placeholder="Any input" formControlName="secondCtrl" required>
           </mat-form-field>
@@ -116,7 +129,7 @@
       </mat-step>
   
       <mat-step>
-        <ng-template matStepLabel icon>Done</ng-template>
+        <ng-template matStepLabel icon>Final Analysis</ng-template>
         You are now done.      
         <button mat-button mat-raised-button color="primary" >Done</button>      
       </mat-step>
