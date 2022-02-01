@@ -1,0 +1,67 @@
+<mat-divider></mat-divider>
+<h4>Project File Selection</h4>
+<div class="example-sidenav-content" fxLayout="row wrap" fxLayoutGap="5px" fxLayout.xs="flex" fxLayoutAlign="space-evenly center">
+<form [formGroup]="stateForm">
+    <mat-form-field appearance="fill">
+      <mat-label>States Group</mat-label>
+      <input type="text"
+             matInput
+             formControlName="stateGroup"
+             required
+             [matAutocomplete]="autoGroup">
+        <mat-autocomplete #autoGroup="matAutocomplete">
+          <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+            <mat-option *ngFor="let name of group.names" [value]="name">
+              {{name}}
+            </mat-option>
+        </mat-optgroup>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+</div>
+
+<h4>KeyWords Selection</h4>
+<mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Keywords</mat-label>
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+        {{fruit.name}}
+        <button matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip>
+      <input placeholder="New fruit..."
+             [matChipInputFor]="chipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+  </mat-form-field>
+
+
+  <p>
+    <b>The following keywords are selected:</b> <mat-label *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+      {{ fruit.name }} </mat-label>
+  </p>
+
+<mat-divider></mat-divider>
+  <mat-form-field class="example-chip-list" appearance="fill">
+    <mat-label>Select Category:</mat-label>
+    <mat-select [formControl]="categoriesControl" multiple>
+    
+      <mat-select-trigger>
+        <mat-chip-list>
+          <mat-chip *ngFor="let category of categoriesControl.value"
+            [removable]="true" (removed)="onCatRemoved(category)" color="accent" selected>
+            {{ category }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-select-trigger>
+    
+      <mat-option *ngFor="let category of categories" [value]="category">
+        {{ category }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>

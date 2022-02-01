@@ -63,6 +63,7 @@ export class SementicComponent implements OnInit {
   drop(event: CdkDragDrop<Vegetable[]>) {
     moveItemInArray(this.vegetables, event.previousIndex, event.currentIndex);
   }
+  
   keywords = new Set(['Daily', 'Weekly', 'Monthly']);
   formControl = new FormControl(['Daily']);
 

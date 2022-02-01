@@ -5982,8 +5982,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\DC Universe\Ucsc\Third Year\ENH 3201 Industrial Placements\ECL Project\NLPDash\src\polyfills.ts */"./src/polyfills.ts");
-module.exports = __webpack_require__(/*! D:\DC Universe\Ucsc\Third Year\ENH 3201 Industrial Placements\ECL Project\NLPDash\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! D:\DC Universe\Ucsc\Third Year\ENH 3201 Industrial Placements\ECL Project\NLP Dash\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! D:\DC Universe\Ucsc\Third Year\ENH 3201 Industrial Placements\ECL Project\NLP Dash\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })

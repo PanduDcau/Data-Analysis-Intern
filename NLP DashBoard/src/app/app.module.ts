@@ -9,6 +9,8 @@ import {MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +26,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatAutocompleteModule } from '@angular/material';
+import { NermoduleComponent } from './modules/nermodule/nermodule.component';
+import { NewsapiComponent } from './modules/newsapi/newsapi.component';
+
 
 
 
@@ -32,6 +37,8 @@ import { MatAutocompleteModule } from '@angular/material';
     AppComponent,
     PosPageComponent,
     SementicComponent,
+    NermoduleComponent,
+    NewsapiComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,9 @@ import { MatAutocompleteModule } from '@angular/material';
     MatNativeDateModule,
     MatCardModule,
     MatStepperModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    DragDropModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

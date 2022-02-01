@@ -1,0 +1,110 @@
+
+<div fxLayout="inline-flex" fxLayoutAlign="space-between center" fxLayoutGap="20px" fxLayout.md="column" class="stats-cards">
+    <mat-tab-group fxFlex="80">
+        <mat-tab label="Local">
+            <h3>Don't Look Up</h3>
+            Kate Dibiasky (Jennifer Lawrence), an astronomy grad student, and her professor Dr. Randall Mindy (Leonardo DiCaprio) make an astounding discovery of a comet orbiting within the solar system. The problem - it's on a direct collision course with Earth. The other problem? No one really seems to care. Turns out warning mankind about a planet-killer the size of Mount Everest is an inconvenient fact to navigate. With the help of Dr. Oglethorpe (Rob Morgan), Kate and Randall embark on a media tour that takes them from the office of an indifferent President Orlean 
+            (Meryl Streep) and her sycophantic son and Chief of Staff.
+
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Get the Latest News
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Summerization  {{panelOpenState ? 'Read' : 'Unread'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>A cosmic case of UFOs, intergalactic intrigue and out-of-this-world romance launches the Mystery Gang into their most unearthly adventure ever. Stranded in Roswell, New Mexico, the gang soon discovers the place crawls with UFO buffs, secretive scientists... and less-than-friendly alien invaders. Then after being chased by aliens and beamed aboard a UFO, 
+                      Shaggy and Scooby-Doo fall head over heels in love with Crystal and Amber. </p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+        </mat-tab>
+
+        <mat-tab label="Foreign"> 
+            <h3>The first of two insulting 50th anniversary Scooby sequels</h3> 
+            <p>Way back in 1985, a pair of bumbling ghosts named Bogel and Weerd tricked Scooby and Shaggy into opening a chest of demons, and it was up to the beloved goofballs to return all 13 escaped specters into the mysterious box. To aid them in their mission, Scooby, Shaggy, Scrappy, and Daphne were joined by a young con artist named Flim-Flam, and a warlock named Vincent Van Ghoul (voiced by and modeled after horror icon Vincent Price).
+                 Unfortunately, the show was canceled with only 11 demons back in the chest.</p>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Summerization  {{panelOpenState ? 'Read' : 'Unread'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>A twisted tale told by Harley Quinn herself, when Gotham's most nefariously narcissistic villain, Roman Sionis, and his zealous right-hand, Zsasz, put a target on a young girl named Cass, the city is turned upside down looking for her. Harley, Huntress, Black Canary and Renee Montoya's paths collide,
+                       and the unlikely foursome have no choice but to team up to take Roman down.
+                       Born upon the shores of the surface world, Arthur Curry (Jason Momoa) discovers that
+                        he is only half human, with the other half of his blood being of Atlanteean descent,
+                         thus making him the rightful heir to the throne of the undersea kingdom of Atlantis.
+                          However, Arthur learns that Atlantis is being ruled by his malicious half-brother Orm (Patrick Wilson), who seeks to unite the seven underwater kingdoms and wage war upon the surface. With aid from Nuidis Vulko (Willem Dafoe) and the gorgeous Mera (Amber Heard), Arthur must discover the full potential of his true destiny and 
+                       become Aquaman in order to save Atlantis and the surface from Orm's evil plot. </p>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </mat-tab>
+        <mat-tab label="Special News"> 
+            <h3>Peacemaker</h3>
+            <p>John Cena, James Gunn, Jennifer Holland, and the cast of "Peacemaker" break down the hilarious 
+            opening credits dance scene and who had the best (and worst) dance moves.
+            In exchange for lighter sentences, just like the anti-hero team in Suicide Squad (2016),
+             a new batch of Belle Reve's meta-humans strike a deal with the cold head of Task Force X, 
+             Amanda Waller. This time, her ragtag band of super-powered convicts--Harley Quinn, Bloodsport, Peacemaker, King Shark, Polka-Dot Man, and Ratcatcher 2--venture into the peril-laden South American island nation of Corto Maltese to find the Thinker: the evil scientist in charge of the mysterious Project Starfish. But, as the band joins forces with an old leader of the notorious team, humankind is on the verge of extinction. Can the expendable Suicide
+             Squad stop the new menace that could mean the end of the world as we know it?</p>
+             <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Summerization  {{panelOpenState ? 'Read' : 'Unread'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Determined to ensure Superman's ultimate sacrifice was not in vain, 
+                      Bruce Wayne aligns forces with Diana Prince with plans to recruit a 
+                      team of metahumans to protect the world from an approaching threat of catastrophic
+                       proportions. The task proves more difficult than Bruce imagined, as each of the 
+                       recruits must face the demons of their own pasts to transcend that which has held them 
+                       back, allowing them to come together, finally forming an unprecedented league of heroes.
+                        Now united, Batman, Wonder Woman, Aquaman, Cyborg and The Flash may be too late to save 
+                      the planet from Steppenwolf, DeSaad and Darkseid and their dreadful intentions. </p>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </mat-tab>
+
+      </mat-tab-group>
+
+  <!-- Categorizing Tabs -->
+
+      <mat-card class="example-card" fxFlex='40'>
+        <mat-card-title-group>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Medium</mat-card-subtitle>
+          <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+        </mat-card-title-group>
+        <mat-card-content>
+            The most basic card needs only an mat-card element with some content. However, Angular Material provides a number of preset 
+                sections that you can use inside of an 
+        </mat-card-content>
+
+        <mat-card-title-group>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Medium</mat-card-subtitle>
+            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+          </mat-card-title-group>
+          <mat-card-content>
+              The most basic card needs only an mat-card element with some content. However, Angular Material provides a number of preset 
+                  sections that you can use inside of an 
+          </mat-card-content>
+      </mat-card>
+
+     
+</div>

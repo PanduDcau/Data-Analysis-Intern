@@ -1,4 +1,4 @@
-<div class="example-sidenav-content" fxLayout="row wrap" fxLayoutGap="10px" fxLayout.xs="column" fxLayoutAlign="space-evenly center">
+<div class="example-sidenav-content" fxLayout="row wrap" fxLayoutGap="10px" fxLayout.md="column" fxLayoutAlign="space-evenly center">
 
   <h4>Category of the System</h4>
   <mat-form-field appearance="fill">
@@ -54,8 +54,8 @@
 <mat-divider></mat-divider>
 
 <mat-tab-group>
+
   <mat-tab label="Sentimental Analysis"> 
-    
     <mat-accordion>
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
@@ -131,11 +131,41 @@
       <mat-step>
         <ng-template matStepLabel icon>Final Analysis</ng-template>
         You are now done.      
-        <button mat-button mat-raised-button color="primary" >Done</button>      
+        <button mat-button mat-raised-button color="primary" required>Done</button>      
       </mat-step>
   </mat-horizontal-stepper>
   
    </mat-tab>
+
+   <mat-tab label="Word Cloud"> 
+    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+      <mat-label>Enter some input</mat-label>
+      <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+      <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Select me</mat-label>
+      <mat-select>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+
+    <div class="example-box" cdkDrag>
+      WordCloud Image will be dispalyed Here
+    
+      <div class="example-handle" cdkDragHandle>
+        <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+          <path d="M0 0h24v24H0z" fill="none"></path>
+        </svg>
+      </div>
+    </div>
+
+  </mat-tab>
+
+   
 </mat-tab-group>
 
 
