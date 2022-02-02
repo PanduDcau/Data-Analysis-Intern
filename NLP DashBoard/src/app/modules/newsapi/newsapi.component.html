@@ -56,7 +56,9 @@
             In exchange for lighter sentences, just like the anti-hero team in Suicide Squad (2016),
              a new batch of Belle Reve's meta-humans strike a deal with the cold head of Task Force X, 
              Amanda Waller. This time, her ragtag band of super-powered convicts--Harley Quinn, Bloodsport, Peacemaker, King Shark, Polka-Dot Man, and Ratcatcher 2--venture into the peril-laden South American island nation of Corto Maltese to find the Thinker: the evil scientist in charge of the mysterious Project Starfish. But, as the band joins forces with an old leader of the notorious team, humankind is on the verge of extinction. Can the expendable Suicide
-             Squad stop the new menace that could mean the end of the world as we know it?</p>
+             Squad stop the new menace that could mean the end of the world as we know it?
+             Kenneth Branagh grows out his Detective Poirot mustache again to work another murder mystery, this time while socialites, played by an array of movie stars, sail through Egypt aboard a luxury steamer. While the greatest mystery is how the movie-going public will feel about a film starring Armie Hammer, the combined power of Gal Gadot, Letitia Wright, 
+             and Annette Bening have us focused on the escapism this whodunit is sure to supply.</p>
              <mat-accordion>
                 <mat-expansion-panel (opened)="panelOpenState = true"
                                      (closed)="panelOpenState = false">
@@ -81,29 +83,132 @@
         </mat-tab>
 
       </mat-tab-group>
+   
 
   <!-- Categorizing Tabs -->
 
       <mat-card class="example-card" fxFlex='40'>
         <mat-card-title-group>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Medium</mat-card-subtitle>
-          <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+          <mat-card-title>Name Entity</mat-card-title>
+          <mat-card-subtitle>Categories</mat-card-subtitle>
+          <img mat-card-md-image src="https://monkeylearn.com/static/86a1d73041f401a7630e4d85e293be43/Named-Entity-Recognition-Social.png" >
         </mat-card-title-group>
-        <mat-card-content>
-            The most basic card needs only an mat-card element with some content. However, Angular Material provides a number of preset 
-                sections that you can use inside of an 
-        </mat-card-content>
+
+<div fxLayout="row"  fxLayoutGap="5px">
+        <mat-form-field appearance="fill" >
+            <mat-label>News Categories</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+              <mat-select-trigger>
+                {{toppings.value ? toppings.value[0] : ''}}
+                <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+                  (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Word Enablers</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+              <mat-select-trigger>
+                {{toppings.value ? toppings.value[0] : ''}}
+                <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+                  (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+<div fxLayout="row"  fxLayoutGap="5px">
+  <mat-form-field appearance="fill" >
+      <mat-label>Word Enablers</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value ? toppings.value[0] : ''}}
+          <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+            (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Word Enablers</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value ? toppings.value[0] : ''}}
+          <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+            (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
         <mat-card-title-group>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Medium</mat-card-subtitle>
-            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-          </mat-card-title-group>
-          <mat-card-content>
-              The most basic card needs only an mat-card element with some content. However, Angular Material provides a number of preset 
-                  sections that you can use inside of an 
-          </mat-card-content>
+            <mat-card-title>Verb Identifcation</mat-card-title>
+            <mat-card-subtitle>Selection of Verb groups</mat-card-subtitle>
+            <img mat-card-md-image src="https://serokell.io/files/dd/ddr1bum1.3_(29)_(1).jpg" >
+        </mat-card-title-group>
+          
+<div fxLayout="row"  fxLayoutGap="5px">
+  <mat-form-field appearance="fill" >
+      <mat-label>Verb List</mat-label>
+      <mat-select [formControl]="verbs" multiple>
+        <mat-select-trigger>
+          {{verbs.value ? verbs.value[0] : ''}}
+          <span *ngIf="verbs.value?.length > 1" class="example-additional-selection">
+            (+{{verbs.value.length - 1}} {{verbs.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let verb of verbList" [value]="verb">{{verb}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Word Enablers</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value ? toppings.value[0] : ''}}
+          <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+            (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+<div fxLayout="row"  fxLayoutGap="5px">
+<mat-form-field appearance="fill" >
+<mat-label>Word Enablers</mat-label>
+<mat-select [formControl]="toppings" multiple>
+  <mat-select-trigger>
+    {{toppings.value ? toppings.value[0] : ''}}
+    <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+      (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+    </span>
+  </mat-select-trigger>
+  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+</mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+<mat-label>Word Enablers</mat-label>
+<mat-select [formControl]="toppings" multiple>
+  <mat-select-trigger>
+    {{toppings.value ? toppings.value[0] : ''}}
+    <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+      (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+    </span>
+  </mat-select-trigger>
+  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
       </mat-card>
 
      

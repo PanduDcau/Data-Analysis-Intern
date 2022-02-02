@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-newsapi',
@@ -11,5 +12,11 @@ export class NewsapiComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  toppings = new FormControl();
+  verbs = new FormControl();
+
+  toppingList: string[] = ['Social', 'Crime', 'Sport', 'Entertainment', 'Political', 'Youth'];
+  verbList: string[] = ['Continous' ,'Past' , 'Present' , 'Future'];
 
 }
