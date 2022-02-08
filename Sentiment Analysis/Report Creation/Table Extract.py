@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[83]:
 
 
 import camelot
 import ghostscript
 from camelot import read_pdf
+from PyPDF2 import PdfFileReader
 
 
 # In[67]:
@@ -57,17 +58,17 @@ from PIL import ImageTk,Image
 # root.mainloop()
 
 
-# In[66]:
+# In[84]:
 
 
-def csv():
-    for i in range(all_tables.n):
-        all_tables[i].to_csv(f'PowerGeneration_{i+1}.csv', index=True)
+def csv(c,d):
+    for i in range(c,d,1):
+        all_tables[i].to_csv(f'PowerGeneration_{i}.csv', index=True)
 
-def xlsx():
+def xlsx(c,d):
     # export individually as Excel (.xlsx extension)
-    for i in range(all_tables.n):
-        all_tables[i].to_excel(f'PowerGeneration_{i+1}.xlsx')
+    for i in range(c,d,1):
+        all_tables[i].to_excel(f'PowerGeneration_{i}.xlsx', index=True)
 
 def html():
     # export to HTML
@@ -78,18 +79,36 @@ def method():
     option = int(input("Enter your option from 1-3  : "))
 
     if option == 1:
-        csv()
+        c= int(input('Input the Number in Starting Table No :'))
+        print("\n")
+        print("Ending no Inputed adding +1 to the No. Example: ending table 20 => Input 21")
+        d = int(input('Input the Number of Ending Table No + 1:'))
+        csv(c,d)
  
     elif option == 2:
-        xlsx()
+        c= int(input('Input the Number in Starting Table No :'))
+        print("\n")
+        print("Ending no Inputed adding +1 to the No. Example: ending table 20 => Input 21")
+        d = int(input('Input the Number of Ending Table No + 1:'))
+        xlsx(c,d)
  
     elif option == 3:
         html()
  
     else:
         print("Incorrect option")
+        
        
 if __name__ == "__main__":
+    # creating a pdf file object
+    pdfObject = open('/Users/Asus/Documents/Atmel Studio/OCR/Report_1.pdf', 'rb')
+
+    # creating a pdf reader object
+    pdfReader = PdfFileReader(pdfObject)
+
+    print("Number of Pages in the Pdf")
+    print(pdfReader.getNumPages())
+
     a= input('Enter the Page Number for Detect the tables in the Page ')
     print("\n")
     user_list = a.split()
